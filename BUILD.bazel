@@ -220,5 +220,6 @@ cc_library(
     srcs = ["libntl.a"],
     #includes = ["include"],
     linkopts = ["-lpthread", "-ldl"],
+    linkstatic = True,
     visibility = ["//visibility:public"],
 )
