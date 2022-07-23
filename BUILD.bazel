@@ -120,6 +120,7 @@ genrule(
         'cd src',
         './configure PREFIX=$$INSTALL_DIR NTL_THREADS=on NTL_THREAD_BOOST=on NTL_EXCEPTIONS=on SHARED=on NTL_STD_CXX11=on NTL_SAFE_VECTORS=off TUNE=generic',
         'make && make install',
+        'cp $$TMP_DIR/../include/NTL/config.h $$INSTALL_DIR/include/NTL',
         'rm -rf $$TMP_DIR',
     ]),
 )
